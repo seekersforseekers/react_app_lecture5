@@ -1,20 +1,17 @@
-import React from 'react';
+import React, { useState, useContext } from 'react';
 import Child from './Child';
 import Parent from './Parent';
 
 import CounterContext from './CounterContext'
 
 function App() {
+  let countvalue=useContext(countvalue)
+ // let[countvalue,setcount]=useState(0);
   return (
   //now we import context Api here and use as wrapper to all html tags
-    <CounterContext.Provider value={10}> 
+    <CounterContext.Provider value={countvalue}> 
     <div>
-        {/*
-    ya ham n yhan s pros byja h parent ko 
-    <div className="App">
-      <Parent Name="Fakhra"/> {/*pass rops to parent 
-    </div> */}
-    
+      
     <Parent/>
     </div>
     </CounterContext.Provider>
