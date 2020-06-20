@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext} from 'react'
 import counterContext from './CounterContext';
 
 
@@ -8,8 +8,8 @@ const Child = () => {
         <div>
          
             <h1>this value passed by countercontext</h1>
-            <p>value is : {counterValue}</p>
-<button onClick={()=>{}}>Increament</button>
+            <p>value is : {counterValue[0]}</p>
+<button onClick={()=>{counterValue[1](counterValue[0]+1)}}>Increament</button>
         </div>
     );
 }
